@@ -1,0 +1,45 @@
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    span {
+        margin-right: 16px;
+
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+}
+
+.tab-line {
+    height: 4px;
+    background-color: blue;
+    position: absolute;
+    top: -5px;
+    transition: 0.5s;
+}
+
+span {
+    align-self: center;
+}
+
+#counter {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#text {
+    font-style: italic;
+}

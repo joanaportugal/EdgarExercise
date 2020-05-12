@@ -1,0 +1,4 @@
+export const ADD_POKEMON = "ADD_POKEMON_ACTION";
+export const USER_NAVIGATION = "NAVIGATION_ACTION";
+export const ADD_POKEMON_LIST = "ADD_POKEMON_LIST";
+export const USER_TYPE = "USER_TYPE"

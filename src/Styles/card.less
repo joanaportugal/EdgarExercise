@@ -1,0 +1,216 @@
+.pokemonPageWrapper {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+    .flexContainer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      .card {
+        margin-right: 30px;
+      }
+    }
+  }
+  
+  .card {
+    font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+    margin-top: 30px;
+    width: 350px;
+    height: 560px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-direction: column;
+    background: linear-gradient(110deg, red 0%, white 100%);
+  
+    &.normal {
+      background: linear-gradient(110deg, #fdbb2d 0%, #3a1c71 100%);
+    }
+  
+    &.electric {
+      background: linear-gradient(to bottom right, #fdbb2d 0%, #ff0 100%);
+    }
+  
+    &.water {
+      background: linear-gradient(120deg, #1cb5e0 0%, #000851 100%);
+    }
+  
+    &.fire {
+      background: linear-gradient(0deg, #c71800 10%, #fcc245 100%);
+    }
+  
+    &.psychic {
+      background: linear-gradient(140deg, #ffa7f9 0%, #ff2cc3 39%, #ffe3a7 100%);
+    }
+  
+    &.grass,
+    &.bug {
+      background: linear-gradient(140deg, #c4da3d 0%, #6e7f0e 69%, #275009 100%);
+    }
+  
+    &.ground,
+    &.rock {
+      background: linear-gradient(140deg, brown 0%, #6e7f0e 69%, #275009 100%);
+    }
+  
+    &.fighting {
+      background: linear-gradient(0deg, grey 10%, #fcc245 100%);
+    }
+  
+    &.fairy {
+      background: linear-gradient(
+        45deg,
+        #ffe6f0 0%,
+        #ffc5e0 34%,
+        #ffa6b9 71%,
+        #ff8a95 100%
+      );
+    }
+  
+    &.dark,
+    &.poison,
+    &.ghost {
+      background: linear-gradient(20deg, #191919 0%, #100b32 33%, #5c0249 100%);
+    }
+  
+    .imageWrapper {
+      display: flex;
+      width: 100%;
+      height: 200px;
+      border-radius: 6px;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+  
+      .pokemon-image {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  
+    .textWrapper {
+      width: calc(100% - 40px);
+      height: calc(100% - 250px);
+      background-color: rgba(255, 255, 255, 0.65);
+      position: relative;
+      margin: 0px 20px 20px 20px;
+      padding-top: 30px;
+      border-radius: 6px;
+  
+      .pokemon-type {
+        position: absolute;
+        padding: 0px 10px;
+        background-color: black;
+        top: -15px;
+        right: 20px;
+        text-transform: uppercase;
+        color: white;
+        font-size: 14px;
+        border-radius: 6px;
+        height: 36px;
+        line-height: 36px;
+      }
+  
+      .pokemon-name {
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        font-size: 20px;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+      }
+  
+      .info {
+        display: flex;
+        .pokemon-column {
+          text-align: right;
+          font-weight: 300;
+          width: 50%;
+          font-size: 12px;
+          line-height: 25px;
+          text-transform: uppercase;
+          padding: 0px;
+          padding-right: 5px;
+        }
+  
+        .column {
+          margin-top: 10px;
+          margin-bottom: 20px;
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          justify-content: center;
+          align-items: center;
+  
+          .pokemon-value,
+          .pokemon-column {
+            text-align: center;
+            width: 100%;
+            line-height: 20px;
+            padding: 0px;
+          }
+          .pokemon-value {
+            text-transform: capitalize;
+          }
+        }
+  
+        .pokemon-value {
+          text-align: left;
+          font-weight: 700;
+          width: 50%;
+          line-height: 25px;
+          font-size: 14px;
+          padding: 0px;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+  
+  button {
+    border: 1px solid;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 2px;
+    text-align: center;
+    padding: 0px 20px;
+  
+    a {
+      padding: 0px;
+      text-decoration: none;
+      color: black;
+    }
+  }
+  
+  .listContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blockContainer {
+    display: flex;
+    flex-direction: row;
+  
+    .abilityWrapper {
+      font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+      flex-direction: column;
+      align-self: flex-end;
+  
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+  
+      h3 {
+        font-size: 16px;
+        max-width: 500px;
+      }
+    }
+  }

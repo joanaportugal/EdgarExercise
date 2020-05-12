@@ -1,0 +1,86 @@
+@color-white: #ffffff;
+@color-black: #000000;
+@color-atmo1: #f9f9f9;
+@color-atmo2: #f5f5f5;
+@color-atmo3: #f0f0f0;
+@color-atmo4: #dedede;
+@color-atmo5: #bcbcbc;
+@color-atmo6: #999999;
+@color-atmo7: #414141;
+@color-acce2: #146bd2;
+
+.container {
+  display: inline-block;
+}
+.button {
+  width: 350px;
+  height: 32px;
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  padding-left: 12px;
+  font-size: 16px;
+  margin-left: 20px;
+  cursor: pointer;
+  .chevron {
+    &:before {
+      position: absolute;
+      height: 1px;
+      width: 6px;
+      background-color: @color-atmo7;
+      content: "";
+      top: 16px;
+      right: 12px;
+      transform: rotate(45deg);
+      border-radius: 1px 0px 0px 1px;
+      transition: transform 0.2s ease-out;
+    }
+    &:after {
+      position: absolute;
+      height: 1px;
+      width: 6px;
+      background-color: @color-atmo7;
+      content: "";
+      top: 16px;
+      right: 8px;
+      transform: rotate(-45deg);
+      border-radius: 0px 1px 1px 0px;
+      transition: transform 0.2s ease-out;
+    }
+  }
+}
+.dropdown {
+  &.up {
+    .chevron:after {
+      transform: rotate(45deg);
+    }
+    .chevron:before {
+      transform: rotate(-45deg);
+    }
+  }
+  ul {
+    overflow-y: hidden;
+  }
+}
+.style--dinamicDiv {
+  width: 350px;
+  background: rgb(133, 133, 133);
+  margin-left: 20px;
+  height: 0px;
+  transition: height 0.7s linear;
+  margin-top: 0;
+  padding: 0;
+}
+.p--item {
+  list-style: none;
+  padding-left: 12px;
+  height: 32px;
+  line-height: 32px;
+  cursor: pointer;
+}
+.p--item:hover {
+  background: rgba(194, 192, 192, 0.589);
+}
+h3 {
+  margin-left: 20px;
+}
