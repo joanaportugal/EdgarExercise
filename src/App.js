@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Styles/style.less";
 import Navigation from "./Navigation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { hot } from "react-hot-loader";
@@ -11,6 +10,8 @@ import Exercise4 from "./Pages/Exercise4";
 import FetchExercise from "./Pages/FetchExercise";
 import ReduxExercise from "./Pages/ReduxExercise.js";
 import PokemonFilter from "./Pages/PokemonFilter.js";
+
+import "./Styles/style.less";
 
 class App extends Component {
   render() {
