@@ -12,7 +12,7 @@ function Dropdown({ title, selected, items }) {
   });
 
   function closeDropDown() {
-    if(styleDinamicDiv) styleDinamicDiv.style.height = "0px";
+    if (styleDinamicDiv) styleDinamicDiv.style.height = "0px";
     setOpen(false);
   }
 
@@ -31,7 +31,7 @@ function Dropdown({ title, selected, items }) {
   }
 
   function checkClickOutside(event) {
-    if(!dropdownRef.current.contains(event.target)){
+    if (!dropdownRef.current.contains(event.target)) {
       closeDropDown();
     }
   }

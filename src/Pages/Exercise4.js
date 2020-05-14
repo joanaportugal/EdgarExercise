@@ -23,7 +23,12 @@ const Exercise4 = props => {
     });
   });
 
-  const itemList = ["First Element","Second Element","Third Element","Fourth Element"];
+  const itemList = [
+    "First Element",
+    "Second Element",
+    "Third Element",
+    "Fourth Element"
+  ];
 
   const TabText = () => {
     switch (state.option) {

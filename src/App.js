@@ -43,7 +43,7 @@ class App extends Component {
           </Route>{" "}
           <Route path="/pokemonfilter">
             <Navigation selected="pokemonfilter" />
-            <PokemonFilter startId={20} endId={60} />{" "}
+            <PokemonFilter startId={20} endId={80} />{" "}
           </Route>{" "}
         </Switch>{" "}
       </Router>

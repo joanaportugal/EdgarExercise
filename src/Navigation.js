@@ -1,8 +1,8 @@
-import React, {useLayoutEffect} from "react";
+import React, { useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Navigation = ({selected}) => {
-   useLayoutEffect(() => {
+const Navigation = ({ selected }) => {
+  useLayoutEffect(() => {
     const a = document.querySelector(".selected");
     const b = document.querySelector(".partialline");
     b.style.left = `${a.offsetLeft}px`;
@@ -12,16 +12,13 @@ const Navigation = ({selected}) => {
   return (
     <div>
       <div className="topline"> </div>
- 
+
       <div className="partialline"> </div>
 
       <div className="menu">
         <ul>
           <li className="home">
-            <Link
-              className={selected === "home" ? "selected" : null}
-              to="/"
-            >
+            <Link className={selected === "home" ? "selected" : null} to="/">
               Home
             </Link>
           </li>
@@ -77,15 +74,10 @@ const Navigation = ({selected}) => {
               Pokemon Filter
             </Link>
           </li>
-          
         </ul>
       </div>
     </div>
   );
-
-  
 };
 
 export default Navigation;
-
-
