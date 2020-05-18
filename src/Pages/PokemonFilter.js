@@ -13,7 +13,6 @@ import "../Styles/pokemonFilter.less";
 const PokemonFilter = ({ startId, endId }) => {
   const dispatch = useDispatch();
   const pokemonList = useSelector(getAllPokemonsOnList);
-  console.log(pokemonList);
   const typeList = [
     "All",
     "Normal",
@@ -86,7 +85,11 @@ const PokemonFilter = ({ startId, endId }) => {
     <>
       <ul>
         {typeList.map((type, index) => (
-          <li key={index} onClick={() => dispatch(userType(type))}>
+          <li
+            data-testid="option"
+            key={index}
+            onClick={() => dispatch(userType(type))}
+          >
             {type}
           </li>
         ))}

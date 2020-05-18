@@ -10,4 +10,5 @@ export const pokemonListAction = (pokeList, startId, endId) => ({
 export const userType = pokeType => ({
   type: USER_TYPE,
   pokeType
-});
+  
+})

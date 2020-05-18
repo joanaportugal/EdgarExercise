@@ -18,7 +18,7 @@ export const Card = props => {
   const defaultMessage = "...";
   const { normal, hidden } = ability;
   return (
-    <div className={`card u-full-width ${type}`}>
+    <div data-testid="card" className={`card u-full-width ${type}`}>
       <div className="imageWrapper">
         <img src={imageSrc} className="pokemon-image" />
       </div>
