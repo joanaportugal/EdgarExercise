@@ -6,11 +6,11 @@ import { pokemonListAction, userType } from "../../actions/pokemonListAction";
 
 const state = {
   url: { current: null, previous: null },
-  list: { startId: null, endId: null, type: "All" },
+  list: { startId: null, endId: null, type: "All", page: 1, fetch: null, error: null },
   pokemonList: {}
 };
 
-describe("Gallery reducer tests", () => {
+describe("Pokemon reducer tests", () => {
   it("Initial state", () => {
     const initial = state;
 

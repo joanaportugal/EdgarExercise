@@ -74,6 +74,15 @@ const Navigation = ({ selected }) => {
               Pokemon Filter
             </Link>
           </li>
+
+          <li className="thunkpokemon">
+            <Link
+              className={selected === "thunkpokemon" ? "selected" : null}
+              to="/thunkpokemon"
+            >
+              Thunk Pokemon
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

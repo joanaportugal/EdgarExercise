@@ -10,6 +10,7 @@ import Exercise4 from "./Pages/Exercise4";
 import FetchExercise from "./Pages/FetchExercise";
 import ReduxExercise from "./Pages/ReduxExercise.js";
 import PokemonFilter from "./Pages/PokemonFilter.js";
+import ThunkPokemon from "./Pages/ThunkPokemon.js";
 
 import "./Styles/style.less";
 
@@ -45,6 +46,10 @@ class App extends Component {
           <Route path="/pokemonfilter">
             <Navigation selected="pokemonfilter" />
             <PokemonFilter startId={20} endId={80} />{" "}
+          </Route>{" "}
+          <Route path="/thunkpokemon">
+            <Navigation selected="thunkpokemon" />
+            <ThunkPokemon />{" "}
           </Route>{" "}
         </Switch>{" "}
       </Router>

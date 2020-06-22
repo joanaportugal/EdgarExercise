@@ -5,7 +5,7 @@ import React from "react";
 import { createStoreWithInitialState } from "../../Store/store";
 import * as actions from "../../Store/actions/pokemonListAction";
 
-jest.spyOn(actions, 'userType')
+jest.spyOn(actions, "userType");
 
 const state = {
   pokemonList: {
@@ -139,22 +139,23 @@ describe("PokemonFilter", () => {
 
     fireEvent.click(getAllByTestId("option")[3]);
 
-    rerender(<Provider store={store}>
+    rerender(
+      <Provider store={store}>
         <PokemonFilter startId={null} endId={null} />
-      </Provider>)
+      </Provider>
+    );
 
-    expect(actions.userType).toHaveBeenNthCalledWith(1, "Electric" ); 
+    expect(actions.userType).toHaveBeenNthCalledWith(1, "Electric");
 
     expect(getAllByTestId("card").length).toBe(1);
-
   });
 
-  it('snapshot', () => {
+  it("snapshot", () => {
     const { container } = render(
-        <Provider store={store}>
-          <PokemonFilter startId={10} endId={20} />
-        </Provider>
-      );
-      expect(container).toMatchSnapshot();
-  })
+      <Provider store={store}>
+        <PokemonFilter startId={10} endId={20} />
+      </Provider>
+    );
+    expect(container).toMatchSnapshot();
+  });
 });

@@ -2,12 +2,15 @@ import {
   ADD_POKEMON,
   USER_NAVIGATION,
   ADD_POKEMON_LIST,
-  USER_TYPE
+  USER_TYPE,
+  FETCH_POKEMON_SUCCESS,
+  FETCH_POKEMON_FAILURE,
+  FETCH_POKEMON_START
 } from "../constants";
 
 const initialState = {
   url: { current: null, previous: null },
-  list: { startId: null, endId: null, type: "All" },
+  list: { startId: null, endId: null, type: "All", page: 1, fetch: null, error: null },
   pokemonList: {}
 };
 
@@ -39,6 +42,26 @@ export function pokemonReducer(state = initialState, action) {
           ...action.pokeList
         }
       };
+      case FETCH_POKEMON_SUCCESS:
+        return{
+          ...state,
+          list:{
+            ...state.list,
+            type: action.pokemonType,
+            page: action.page,
+            fetch: "Success"
+          },
+          pokemonList: {...state.pokemonList, ...action.list}
+        };
+      case FETCH_POKEMON_FAILURE:
+        return {
+          ...state, 
+          list:{
+          ...state.list,
+          fetch: "Error",
+          error: action.message
+       }
+    };
     case USER_TYPE:
       return {
         ...state,
@@ -47,6 +70,7 @@ export function pokemonReducer(state = initialState, action) {
           type: action.pokeType
         }
       };
+
     default:
       return state;
   }
